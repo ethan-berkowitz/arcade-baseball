@@ -3,11 +3,14 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Ball
     - BallSpawner
+    - Baserunner
     - DestroyIfBelow
     - FlipperMotor
+    - HitTypeText
     - LightToggle
+    - RunnerSpawner
+    - Scoreboard
     - Status
-    - TextOnScreen
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -91,39 +94,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2026}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 2128}
+      Script: {instanceID: 2028}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2130}
     - Class: 114
-      Script: {instanceID: 2528}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 2530}
     - Class: 114
-      Script: {instanceID: 3396}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 3554}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 3630}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 3914}
+      Script: {instanceID: 3558}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 3634}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 5322}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 5468}
+      Script: {instanceID: 4162}
     - Class: 114
-      Script: {instanceID: 5522}
+      Script: {instanceID: 4542}
     - Class: 114
-      Script: {instanceID: 5764}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 6072}
+      Script: {instanceID: 5328}
     - Class: 114
-      Script: {instanceID: 7460}
+      Script: {instanceID: 5474}
+    - Class: 114
+      Script: {instanceID: 5528}
+    - Class: 114
+      Script: {instanceID: 5770}
+    - Class: 114
+      Script: {instanceID: 7466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -151,6 +160,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: b6d6113efec7b74b9c514b07536944ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Baserunner
   - hash:
       serializedVersion: 2
       Hash: a9d9d285d996b592f1ccf674fa017099
@@ -201,7 +216,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 3d8c531124c67b1b99f877dcf5c722d9
+      Hash: e075d05ca42e9a9484248796f49c8c92
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LightToggle
@@ -249,7 +264,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 61e7ccac48ae2710524291bd206ab433
+      Hash: 3f49d47eb15d1976e002fa9dfb15fedc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -429,6 +444,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: d9ab751f79085337716214bd152bbf13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HitTypeText
+  - hash:
+      serializedVersion: 2
       Hash: 65784ab5ae832e00230735e19000957b
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -459,7 +480,7 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: 481f872988a6cff5ed4219ed013a3da8
+      Hash: 03e73d79d3860c9eb67892ad55b56056
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BallSpawner
@@ -523,6 +544,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1ac950728b1fbd2b57f95eabefeda8ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scoreboard
   - hash:
       serializedVersion: 2
       Hash: 03116c959005bf565efe4a31f8be265e
@@ -597,6 +624,12 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: f3ed26429746e9a243cbfcdcc77ff5e6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RunnerSpawner
+  - hash:
+      serializedVersion: 2
       Hash: 3d860abc344bfbd5a594aa55314fb635
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -625,12 +658,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
-  - hash:
-      serializedVersion: 2
-      Hash: e1a79af82e3d338d0dd4c91da4bef2eb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RotateWithKeys
   - hash:
       serializedVersion: 2
       Hash: 9efc8c65b86b5c1022ed3efd7ac004a8
@@ -957,7 +984,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 8137bebf8fe16fe1e3ba1e2495161d09
+      Hash: 8a0cb2a9e8e0283512aeebcdfa7c3f12
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Status
@@ -970,4 +997,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Main.unity
-  playerPath: /Users/ethanberkowitz/Documents/Unity/all_star_baseball/Builds/baseball_build
+  playerPath: /Users/ethanberkowitz/Documents/Unity/all_star_baseball/Builds/baseball_build3

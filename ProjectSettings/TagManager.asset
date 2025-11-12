@@ -9,6 +9,13 @@ TagManager:
   - Triple
   - HomeRun
   - Out
+  - Strike
+  - SingleLeft
+  - SingleRight
+  - DoubleLeft
+  - DoubleRight
+  - OutLeft
+  - OutRight
   layers:
   - Default
   - TransparentFX

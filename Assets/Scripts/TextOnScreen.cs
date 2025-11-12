@@ -7,18 +7,26 @@ public class TextOnScreen : MonoBehaviour
 	public Status status;
 
     void Start()
-    {
-        textElement.text = "Single: " + status.hit_single.ToString() + "\n" +
-							"Double: " + status.hit_double.ToString() + "\n" +
-							"Triple: " + status.hit_triple.ToString() + "\n" +
-							"Out: " + status.hit_out.ToString();
-    }
+	{
+        textElement.text = "First: " + status.on_first.ToString() + "\n" +
+							"Second: " + status.on_second.ToString() + "\n" +
+							"Third: " + status.on_third.ToString() + "\n" +
+							"Runs: " + status.runs.ToString() + "\n" +
+							"Strikes: " + status.strikes.ToString() + "\n" +
+							"Outs: " + status.outs.ToString()  + "\n" +
+							"Inning: " + status.inning.ToString()  + "\n" +
+							"Outcome: " + status.outcome;
+	}
 
 	void Update()
 	{
-        textElement.text = "Single: " + status.hit_single.ToString() + "\n" +
-							"Double: " + status.hit_double.ToString() + "\n" +
-							"Triple: " + status.hit_triple.ToString() + "\n" +
-							"Out: " + status.hit_out.ToString();
+        textElement.text = "First: " + status.on_first.ToString() + "\n" +
+							"Second: " + status.on_second.ToString() + "\n" +
+							"Third: " + status.on_third.ToString() + "\n" +
+							"Runs: " + status.runs.ToString() + "\n" +
+							"Strikes: " + status.strikes.ToString() + "\n" +
+							"Outs: " + status.outs.ToString()  + "\n" +
+							"Inning: " + status.inning.ToString()  + "\n" +
+							"Outcome: " + status.outcome;
 	}
 }
