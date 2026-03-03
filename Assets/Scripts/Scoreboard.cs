@@ -15,8 +15,9 @@ public class Scoreboard : MonoBehaviour
 
 		uiText.color = Color.white;
 		uiText.text = "Runs: " + status.runs.ToString()
-						+ "\nInning: " + status.inning.ToString()
+						+ "   Inning: " + status.inning.ToString()
 						+ "\nOuts: " + status.outs.ToString()
-						+ "\nStrikes: " + status.strikes.ToString();
+						+ "   Strikes: " + status.strikes.ToString()
+						+ "\n" + status.scoreboard_outcome;
 	}
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Status : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class Status : MonoBehaviour
 	public bool on_second = false;
 	public bool on_third = false;
 	public string outcome = "";
+	public string scoreboard_outcome = "Press 'Enter'";
 	public uint max_innings = 3;
 	public bool gameover = false;
 	public bool ball_in_play = false;
+
+	[Header("Events")]
+    public UnityEvent onBallNotInPlay;
 
     void Start()
     {
@@ -22,24 +27,61 @@ public class Status : MonoBehaviour
 
     void Update()
     {
-		if (outcome != "")
+		if (ball_in_play) {
+			scoreboard_outcome = "------";
+		}
+		if (gameover && Input.GetKeyDown(KeyCode.R)) {
+            reset_game();
+		}
+
+		if (outcome != "" && ball_in_play) {
 			ball_in_play = false;
-		if (outcome == "out")
-			check_outs();
-		else if (outcome == "strike")
-			check_strikes();
-		else if (outcome == "single")
-			check_single();
-		else if (outcome == "double")
-			check_double();
-		else if (outcome == "triple")
-			check_triple();
-		else if (outcome == "homerun")
-			check_homerun();
+			onBallNotInPlay?.Invoke();
+		}
+		if (outcome == "out") {
+			apply_outs();
+		}
+		else if (outcome == "strike") {
+			scoreboard_outcome = outcome;
+			apply_strikes();
+		}
+		else if (outcome == "single") {
+			scoreboard_outcome = outcome;
+			apply_single();
+		}
+		else if (outcome == "double") {
+			scoreboard_outcome = outcome;
+			apply_double();
+		}
+		else if (outcome == "triple") {
+			scoreboard_outcome = outcome;
+			apply_triple();
+		}
+		else if (outcome == "homerun") {
+			scoreboard_outcome = outcome;
+			apply_homerun();
+		}
+		else if (gameover) {
+			scoreboard_outcome = "gameover: retry (R)";
+		}
 		outcome = "";
     }
 
-	void check_single() {
+	void reset_game() {
+		gameover = false;
+		runs = 0;
+		outs = 0;
+		strikes = 0;
+		inning = 1;
+		outcome = "";
+		ball_in_play = false;
+		on_first = false;
+		on_second = false;
+		on_third = false;
+		scoreboard_outcome = "Press 'Enter'";
+	}
+
+	void apply_single() {
 		runnerspawner.num_of_moves = 1;
 		strikes = 0;
 		if (on_first == true)
@@ -85,7 +127,7 @@ public class Status : MonoBehaviour
 			on_first = true;
 	}
 
-	void check_double() {
+	void apply_double() {
 		runnerspawner.num_of_moves = 2;
 		strikes = 0;
 		if (on_first)
@@ -124,7 +166,7 @@ public class Status : MonoBehaviour
 		on_second = true;
 	}
 
-	void check_triple() {
+	void apply_triple() {
 		runnerspawner.num_of_moves = 3;
 		strikes = 0;
 		if (on_first == true)
@@ -137,7 +179,7 @@ public class Status : MonoBehaviour
 		on_third = true;
 	}
 
-	void check_homerun() {
+	void apply_homerun() {
 		runnerspawner.num_of_moves = 4;
 		strikes = 0;
 		runs++;
@@ -156,23 +198,29 @@ public class Status : MonoBehaviour
 		on_third = false;
 	}
 
-	void check_outs() {
+	void apply_outs() {
 		strikes = 0;
 		outs++;
 		if (outs == 3)
 		{
-			outs = 0;
-			inning++;
 			runnerspawner.num_of_moves = -1;
 			clear_bases();
+			if (inning == max_innings) {
+				gameover = true;
+			}
+			else {
+				scoreboard_outcome = "end of inning";
+				outs = 0;
+				inning++;
+			}
 		}
-		if (inning > max_innings)
-			gameover = true;
+		else
+			scoreboard_outcome = "out";
 	}
 
-	void check_strikes() {
+	void apply_strikes() {
 		strikes++;
 		if (strikes == 3)
-			check_outs();
+			apply_outs();
 	}
 }

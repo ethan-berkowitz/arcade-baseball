@@ -5,71 +5,61 @@ public class Ball : MonoBehaviour
     public Status status;
 	public LightToggle light_toggle;
 
-	void Start()
-	{
+	void Start() {
 		status = FindObjectOfType<Status>();
 		light_toggle = FindObjectOfType<LightToggle>();
 	}
 
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.R))
-		{
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.R)) {
             status.outcome = "strike";
-			//light_toggle.light_name = "strike";
 			Destroy(gameObject);
 		}
 	}
 
-    void OnCollisionEnter(Collision collision)
+void OnCollisionEnter(Collision collision) 
+{
+    string tag = collision.gameObject.tag;
+
+    switch (tag)
     {
-        if (collision.gameObject.CompareTag("SingleLeft"))
-		{
+        case "SingleLeft":
             status.outcome = "single";
-			light_toggle.light_name = "singleleft";
-		}
-        else if (collision.gameObject.CompareTag("SingleRight"))
-		{
+            light_toggle.light_name = "singleleft";
+            break;
+        case "SingleRight":
             status.outcome = "single";
-			light_toggle.light_name = "singleright";
-		}
-        else if (collision.gameObject.CompareTag("DoubleLeft"))
-		{
+            light_toggle.light_name = "singleright";
+            break;
+        case "DoubleLeft":
             status.outcome = "double";
-			light_toggle.light_name = "doubleleft";
-		}
-        else if (collision.gameObject.CompareTag("DoubleRight"))
-		{
+            light_toggle.light_name = "doubleleft";
+            break;
+        case "DoubleRight":
             status.outcome = "double";
-			light_toggle.light_name = "doubleright";
-		} 
-        else if (collision.gameObject.CompareTag("Triple"))
-		{
+            light_toggle.light_name = "doubleright";
+            break;
+        case "Triple":
             status.outcome = "triple";
-			light_toggle.light_name = "triple";
-		}
-        else if (collision.gameObject.CompareTag("HomeRun"))
-		{
+            light_toggle.light_name = "triple";
+            break;
+        case "HomeRun":
             status.outcome = "homerun";
-			//light_toggle.light_name = "homerun";
-		}
-        else if (collision.gameObject.CompareTag("OutLeft"))
-		{
+            break;
+        case "OutLeft":
             status.outcome = "out";
-			light_toggle.light_name = "outleft";
-		}
-        else if (collision.gameObject.CompareTag("OutRight"))
-		{
+            light_toggle.light_name = "outleft";
+            break;
+        case "OutRight":
             status.outcome = "out";
-			light_toggle.light_name = "outright";
-		}
-        else if (collision.gameObject.CompareTag("Strike"))
-		{
+            light_toggle.light_name = "outright";
+            break;
+        case "Strike":
             status.outcome = "strike";
-			//light_toggle.light_name = "strike";
-		}
-		else
-			return;
-		Destroy(gameObject);
+            break;
+        default:
+            return;
     }
+    Destroy(gameObject);
+}
 }
