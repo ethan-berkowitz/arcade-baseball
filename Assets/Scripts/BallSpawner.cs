@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 public class BallSpawner : MonoBehaviour
 {
-    public GameObject spherePrefab;   // Assign your prefab in the Inspector
-    public Transform spawnPoint;      // Where spheres will spawn
+    public GameObject spherePrefab;
+    public Transform spawnPoint;
 	public Status status;
 	public float force = 2500f;
 	public float forceRange = 400f;
@@ -20,13 +20,11 @@ public class BallSpawner : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-	void Start()
-	{
+	void Start() {
 		status = FindObjectOfType<Status>();
 	}
 
-    void Update()
-    {
+    void Update() {
         if (Input.GetKeyDown(KeyCode.Return) && !status.ball_in_play && !status.gameover) {
             SpawnSphere();
             audioSource.PlayOneShot(releaseBallSFX);
@@ -34,8 +32,7 @@ public class BallSpawner : MonoBehaviour
 		}
     }
 
-    void SpawnSphere()
-    {
+    void SpawnSphere() {
         onBallSpawned?.Invoke();
 
         GameObject sphere = Instantiate(spherePrefab, spawnPoint.position, Quaternion.identity);
@@ -43,7 +40,11 @@ public class BallSpawner : MonoBehaviour
 
 		float randomForceRange = Random.Range(-forceRange, forceRange);
         rb.AddForce(Vector3.back * (force + randomForceRange));
-        //Apply small random push
+        applyRandomHorizontalForceOnBall(rb);
+
+    }
+
+    void applyRandomHorizontalForceOnBall(Rigidbody rb) {
         if (rb != null) {
             Vector3 randomPush = new Vector3(
                 Random.Range(-offsetForce, offsetForce),
@@ -54,4 +55,3 @@ public class BallSpawner : MonoBehaviour
         }
     }
 }
-
