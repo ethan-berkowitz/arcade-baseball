@@ -1503,7 +1503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &156730819
 Transform:
   m_ObjectHideFlags: 0
@@ -3343,7 +3343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &415722090
 Transform:
   m_ObjectHideFlags: 0
@@ -3455,7 +3455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &432281726
 Transform:
   m_ObjectHideFlags: 0
@@ -4117,7 +4117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &561617356
 Transform:
   m_ObjectHideFlags: 0
@@ -5011,8 +5011,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 725931070}
   status: {fileID: 0}
   force: 6000
-  forceRange: 1036
-  offsetForce: 3.6
+  forceRange: 1000
+  offsetForce: 2
   onBallSpawned:
     m_PersistentCalls:
       m_Calls:
@@ -9654,7 +9654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1429464996
 Transform:
   m_ObjectHideFlags: 0
@@ -10104,7 +10104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1478438319
 Transform:
   m_ObjectHideFlags: 0
@@ -12027,7 +12027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1723173871
 Transform:
   m_ObjectHideFlags: 0
@@ -12979,6 +12979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bat
   hitSound: {fileID: 8300000, guid: 267f99893bb0c4e51a2b503bee2e1dc5, type: 3}
+  cooldownTime: 0.2
 --- !u!82 &1797280811
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13889,7 +13890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1928270829
 Transform:
   m_ObjectHideFlags: 0
@@ -15008,7 +15009,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.29
+  m_Intensity: 4
   m_Range: 71.1
   m_SpotAngle: 143.3
   m_InnerSpotAngle: 1

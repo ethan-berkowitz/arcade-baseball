@@ -241,7 +241,6 @@ UnityEngine.Font::GetOSFallbacks
 UnityEngine.Font::GetPathsToOSFonts
 UnityEngine.Font::Internal_CreateFont_Injected
 UnityEngine.GameObject::GetComponentsInternal_Injected
-UnityEngine.GameObject::CompareTag_Internal_Injected
 UnityEngine.GameObject::get_activeInHierarchy_Injected
 UnityEngine.GameObject::get_activeSelf_Injected
 UnityEngine.GameObject::get_layer_Injected
@@ -254,6 +253,7 @@ UnityEngine.GameObject::get_transform_Injected
 UnityEngine.GameObject::Internal_CreateGameObject_Injected
 UnityEngine.GameObject::SendMessage_Injected
 UnityEngine.GameObject::SetActive_Injected
+UnityEngine.GameObject::get_tag_Injected
 UnityEngine.GameObject::set_layer_Injected
 UnityEngine.GL::Begin
 UnityEngine.GL::End

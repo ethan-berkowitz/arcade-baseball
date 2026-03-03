@@ -1142,10 +1142,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_GetComponentsInternal_Injected();
 		Register_UnityEngine_GameObject_GetComponentsInternal_Injected();
 
-		//System.Boolean UnityEngine.GameObject::CompareTag_Internal_Injected(System.IntPtr,UnityEngine.Bindings.ManagedSpanWrapper&)
-		void Register_UnityEngine_GameObject_CompareTag_Internal_Injected();
-		Register_UnityEngine_GameObject_CompareTag_Internal_Injected();
-
 		//System.Boolean UnityEngine.GameObject::get_activeInHierarchy_Injected(System.IntPtr)
 		void Register_UnityEngine_GameObject_get_activeInHierarchy_Injected();
 		Register_UnityEngine_GameObject_get_activeInHierarchy_Injected();
@@ -1193,6 +1189,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GameObject::SetActive_Injected(System.IntPtr,System.Boolean)
 		void Register_UnityEngine_GameObject_SetActive_Injected();
 		Register_UnityEngine_GameObject_SetActive_Injected();
+
+		//System.Void UnityEngine.GameObject::get_tag_Injected(System.IntPtr,UnityEngine.Bindings.ManagedSpanWrapper&)
+		void Register_UnityEngine_GameObject_get_tag_Injected();
+		Register_UnityEngine_GameObject_get_tag_Injected();
 
 		//System.Void UnityEngine.GameObject::set_layer_Injected(System.IntPtr,System.Int32)
 		void Register_UnityEngine_GameObject_set_layer_Injected();

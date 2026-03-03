@@ -28,6 +28,7 @@ extern void BallSpawner_Awake_mAD42A214B276881ACF181DE4D2E66D67570694AA (void);
 extern void BallSpawner_Start_m272292F78810FBB2A6C4982B3223BF504EF95AB1 (void);
 extern void BallSpawner_Update_m0242C4CC6518548328E2CD3662FBE9DBA1CE826C (void);
 extern void BallSpawner_SpawnSphere_m560BB6C9D6B6DD07E91499181174E8EC4C1ABAAC (void);
+extern void BallSpawner_applyRandomHorizontalForceOnBall_m89719C42E72280B810AA92E712DE48C63D3F37F1 (void);
 extern void BallSpawner__ctor_m44FBC6FA1D76A70FFB6D0AAE0201D47304FA1B63 (void);
 extern void Baserunner_Update_m8A10DDC70D80CB4580A5E26A8A5D3E5FE78E0B5B (void);
 extern void Baserunner__ctor_m119197D1F5169399A6EE1B5C483C92A820D7D2EA (void);
@@ -84,7 +85,8 @@ extern void TextOnScreen_Update_m3AD4E5B94A03FB2BF929E32E7FDE7117503147A9 (void)
 extern void TextOnScreen__ctor_mC9551A15DCC8D64487FA4945E4B560849F9C1653 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[77] = 
+extern void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876 (void);
+static Il2CppMethodPointer s_methodPointers[79] = 
 {
 	Ball_Start_m6E8CBDA3753768BAFE8CE82AD74B01E8355C50D3,
 	Ball_Update_mE1E2A0FEFCA0034896BB36FD9C75718E4D14E3B2,
@@ -107,6 +109,7 @@ static Il2CppMethodPointer s_methodPointers[77] =
 	BallSpawner_Start_m272292F78810FBB2A6C4982B3223BF504EF95AB1,
 	BallSpawner_Update_m0242C4CC6518548328E2CD3662FBE9DBA1CE826C,
 	BallSpawner_SpawnSphere_m560BB6C9D6B6DD07E91499181174E8EC4C1ABAAC,
+	BallSpawner_applyRandomHorizontalForceOnBall_m89719C42E72280B810AA92E712DE48C63D3F37F1,
 	BallSpawner__ctor_m44FBC6FA1D76A70FFB6D0AAE0201D47304FA1B63,
 	Baserunner_Update_m8A10DDC70D80CB4580A5E26A8A5D3E5FE78E0B5B,
 	Baserunner__ctor_m119197D1F5169399A6EE1B5C483C92A820D7D2EA,
@@ -163,8 +166,9 @@ static Il2CppMethodPointer s_methodPointers[77] =
 	TextOnScreen__ctor_mC9551A15DCC8D64487FA4945E4B560849F9C1653,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876,
 };
-static const int32_t s_InvokerIndices[77] = 
+static const int32_t s_InvokerIndices[79] = 
 {
 	6950,
 	6950,
@@ -187,6 +191,7 @@ static const int32_t s_InvokerIndices[77] =
 	6950,
 	6950,
 	6950,
+	5539,
 	6950,
 	6950,
 	6950,
@@ -243,12 +248,13 @@ static const int32_t s_InvokerIndices[77] =
 	6950,
 	9601,
 	6950,
+	9289,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	77,
+	79,
 	s_methodPointers,
 	0,
 	NULL,
